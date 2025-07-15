@@ -1,0 +1,16 @@
+cryptography==45.0.5
+eth_account==0.13.7
+eth_utils==5.3.0
+fastapi==0.115.14
+pydantic==2.11.7
+pydantic_settings==2.10.1
+python-dotenv==1.1.1
+SQLAlchemy==2.0.41
+starlette==0.46.1
+uvicorn
+web3
+asyncpg
+colorlog
+apscheduler
+hexbytes
+greenlet
