@@ -18,16 +18,9 @@ class Address(BaseModel):
 
 class AddressInDB(Address):
     id: int = Field(..., description="Address id")
-    # private_key: str = Field(..., description="Private key of address", exclude=True)
     created_at: datetime = Field(..., description="Deposit creation time")
 
     model_config = ConfigDict(from_attributes=True)
-
-# class AddressInResponse(BaseModel):
-#     id: int = Field(..., description="Address id")
-#     address: str = Field(..., description="Wallet address")
-#     is_active: bool = Field(..., description="Address activation status")
-#     created_at: datetime = Field(..., description="Address creation time")
 
 class ListAddressesResponse(BaseModel):
     addresses: List[AddressInDB] = Field(..., description="List of addresses")

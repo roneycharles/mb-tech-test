@@ -10,7 +10,6 @@ from api.routes import address, withdraw, deposit
 from core.config import settings
 from core.database import init_db, async_session_context
 from core.logging import config_logging
-from core.security import get_security_manager
 from jobs.withdraw_jobs import setup_withdraw_jobs
 from services.withdraw_service import WithdrawService
 
