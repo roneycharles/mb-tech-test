@@ -3,7 +3,7 @@ export
 
 DOCKER_SERVICES := db banking
 
-.PHONY: install start stop shutdown restart seed
+.PHONY: install start stop shutdown restart seed test-coverage test
 
 install:
 	@echo "Installing requirements..."
@@ -34,6 +34,11 @@ seed:
 	docker exec -i exchange-db psql -U ${DB_USER} -d ${DB_NAME} < ./sql/seed.sql
 	@echo "Seed completed!"
 
+test:
+	pytest tests/ -v
+
+test-coverage:
+	pytest tests/ --cov=services --cov-report=html --cov-report=term-missing -v
 
 
 

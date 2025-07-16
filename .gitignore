@@ -3,3 +3,14 @@ venv/
 .idea/
 .DS_Store
 .env
+.coverage
+coverage.xml
+__pycache__/
+htmlcov/
+.pytest_cache/
+*.pyc
+*.pyo
+*.pyd
+*$py.class
+*.log
+logs/
