@@ -2,8 +2,9 @@ import logging
 from typing import AsyncGenerator
 
 from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker, AsyncSession
-from sqlalchemy.ext.declarative import declarative_base
 from contextlib import asynccontextmanager
+
+from sqlalchemy.orm import declarative_base
 
 from core.config import settings
 

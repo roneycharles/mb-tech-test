@@ -75,7 +75,7 @@ class AddressService:
                 message = f"Successfully created {created_count} addresses with {total_failures} failures"
             else:
                 status = "failure"
-                message = f"Failed to create any of the {request.amount} addresses"
+                message = f"Failed to create any of the {request.quantity} addresses"
 
             return CreateAddressesResponse(
                 status=status,
